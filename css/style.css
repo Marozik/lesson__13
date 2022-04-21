@@ -1,0 +1,572 @@
+@import "null_style.css";
+
+
+body{
+	background: #540262;
+	background: -moz-linear-gradient(top, #540262 0%, #2A1858 50%, #390404 100%);
+	background: -webkit-linear-gradient(top, #540262 0%, #2A1858 50%, #390404 100%);
+	background: linear-gradient(to bottom, #540262 0%, #2A1858 50%, #390404 100%);
+	font-family: 'Courier New', Courier, monospace;
+	font-size: 25px;
+	font-weight: 700;
+	letter-spacing: 3px;
+}
+
+.animation {
+	max-width: 1000px;
+	height: 550px;
+	margin: 150px auto;
+}
+.animation__body {
+	width: 100%;
+	height: 100%;
+	background: url(../img/bacjground.png);
+	background-size: cover;
+	box-shadow: 0px 0px 50px 0px #000000;
+	overflow: hidden;
+	position: relative;
+	border-radius: 40px;
+}
+
+/*_______FARGO INTRO ANIMATION_______*/
+
+.fargo-intro {
+	width: 100%;
+	height: 100%;
+	background-color: #000000;
+	position: relative;
+	z-index: 10;
+	color: #ffff;
+	opacity: 1;
+	animation: opacity 5s linear forwards 26s;
+}
+@keyframes opacity {
+	0% { 
+		opacity: 1;
+	}
+	25% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 1;
+	}
+	75% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+.fargo-intro__container {
+	max-width: 500px;
+	margin: auto;
+	text-align: center;
+}
+.fargo-intro__text-1 {
+	text-transform: uppercase;
+	position: absolute;
+	top: 50%;
+	left: 30%;
+	opacity: 0;
+	animation: story 4s linear forwards;
+}
+@keyframes story {
+	0% { 
+		opacity: 0;
+	}
+	25% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 1;
+	}
+	75% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+.fargo-intro__long {
+	color: red;
+}
+.fargo-intro__text-2 {
+	width: 400px;
+	position: absolute;
+	top: 50%;
+	left: 30%;
+	opacity: 0;
+	animation: zhytomyr 4s linear forwards 5s;
+}
+@keyframes zhytomyr {
+	0% { 
+		opacity: 0;
+	}
+	25% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 1;
+	}
+	75% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+.fargo-intro__text-3 {
+	width: 400px;
+	position: absolute;
+	top: 50%;
+	left: 30%;
+	opacity: 0;
+	animation: zhytomyr 4s linear forwards 10s;
+}
+.fargo-intro__text-4 {
+	width: 400px;
+	position: absolute;
+	top: 50%;
+	left: 30%;
+	opacity: 0;
+	animation: zhytomyr 4s linear forwards 15s;
+}
+.fargo-intro__text-5 {
+	text-transform: uppercase;
+	font-size: 40px;
+	width: 400px;
+	position: absolute;
+	top: 45%;
+	left: 30%;
+	opacity: 0;
+	color: red;
+	animation: zhytomyr 4s linear forwards 20s;
+}
+.fargo-intro__text-6 {
+	width: 400px;
+	position: absolute;
+	top: 55%;
+	left: 30%;
+	opacity: 0;
+	animation: zhytomyr 4s linear forwards 20s;
+}
+.fargo-intro__text-7 {
+	width: 400px;
+	position: absolute;
+	top: 50%;
+	left: 30%;
+	opacity: 0;
+	animation: zhytomyr 5s linear forwards 25s;
+}
+.fargo-intro__text-7_red {
+	text-transform: uppercase;
+	color: rgb(228, 5, 5);
+	letter-spacing: 50px;
+	font-size: 50px;
+}
+
+
+/*____SURFACE____*/
+.body-animation__surface {
+	height: 130px;
+	width: 400%;
+	background: url(../img/surface.png) repeat-x;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	animation-name: surface;
+	animation: surface 12s linear 0.6 forwards 30s;
+}
+@keyframes surface {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(-100%);
+	}
+}
+
+
+
+.body-animation__girl-on-bike {
+	transform: translate(-30%, -63%) scale(0.15);
+	animation: girl-levitation 2s linear forwards 42s;
+	opacity: 1;
+}
+
+@keyframes girl-levitation {
+	0% {
+		transform: translate(-30%, -63%) scale(0.15);
+		opacity: 1;
+	}
+	100% {
+		transform: translate(-30%, -99%) scale(0);
+		opacity: 0;
+	}
+}
+
+
+/*____WHEELS ANIMATION-SPINING____*/
+#left-wheel,
+#right-wheel {
+	animation: wheel 1.5s linear 4.7 30s;
+	transform-origin: center;
+	transform-box: fill-box;
+}
+@keyframes wheel {
+	0%{
+		transform: rotateZ(0deg);
+	}
+	100%{
+		transform: rotateZ(360deg);
+	}
+}
+
+
+/*____LEGS ANIMATION UP-DOWN____*/
+#front-leg {
+	animation: front 1s linear 7 alternate forwards 30s;
+	transform-origin: 0px 70px;
+	transform-box: fill-box;
+}
+@keyframes front {
+	0% {
+		transform: translateY(0px) rotateZ(0deg);
+	}
+	100%{
+		transform: translateY(-20px) rotateZ(40deg);
+	}
+}
+
+#back-leg {
+	animation: back 1s linear 9  alternate forwards 28s;
+	transform-origin: 0px 70px;
+	transform-box: fill-box;
+}
+@keyframes back {
+	0% {
+		transform: translateY(0px) rotateZ(0deg);
+	}
+	100%{
+		transform: translateY(20px) rotateZ(-40deg);
+	}
+}
+
+/*____HAIR ANIMATION UP-DOWN____*/
+#hair {
+	animation: hair 1s ease 7 alternate 30s;
+	transform-origin: top right;
+}
+@keyframes hair {
+	0% {
+		transform: translateY(-2px) rotateZ(0deg);
+	}
+	50% {
+		transform: translateY(1px) rotateZ(-1deg);
+	}
+	100% {
+		transform: translateY(2px) rotateZ(0deg);
+	}
+}
+
+/*____BIKE ANIMATION UP-DOWN____*/
+#bike_2 {
+	animation: bike 0.8s ease 7 alternate 30s;
+}
+@keyframes bike {
+	0% {
+		transform: translateY(0px)
+	}
+	100% {
+		transform: translateY(5px)
+	}
+}
+
+
+/*____LIGHT ANIMATION____*/
+.girl-on-bike__light {
+	width: 0px;
+	height: 0px;
+	transform: translate(750px, 430px) scale(6);
+	border-style: solid;
+	border-width: 15px 120px 50px 0;
+	border-color: transparent rgba(249, 254, 117, 0.55) transparent transparent;
+	animation: light 2s steps(10,start) forwards 35s;
+}
+@keyframes light {
+	0% {
+		visibility: visible;
+	}
+	10% {
+		visibility: hidden;
+	}
+	20% {
+		visibility: visible;
+	}
+	30% {
+		visibility: hidden;
+	}
+	40% {
+		visibility: visible;
+	}
+	50% {
+		visibility: hidden;
+	}
+	60% {
+		visibility: visible;
+	}
+	70% {
+		visibility: hidden;
+	}
+	80% {
+		visibility: visible;
+	}
+	90% {
+		visibility: hidden;
+	}
+	100% {
+		visibility: hidden;
+	}
+}
+
+
+
+/*____ALIEN ANIMATION_____*/
+.body-animation__alien {
+	position: absolute;
+	bottom: 3%;
+	right: 3%;
+}
+.alien__image {
+	display: block;
+	width: 170px;
+	height: 170px;
+	opacity: 0;
+	transform: translateY(-15%);
+	animation: alien 3s linear forwards 36s, levitation 3s linear infinite alternate, alien-out 2s linear forwards 45s;
+}
+@keyframes alien {
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+@keyframes levitation {
+	0% {
+		transform: translateY(-15%);
+	}
+	100% {
+		transform: translateY(-5%);
+	}
+}
+
+@keyframes alien-out {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+/*_____UFO ANIMATION____*/
+
+
+.ufo {
+	transform:translate(-14%, -182%) scale(0.6);
+	opacity: 0;
+	animation: ufo-opacity 1s ease-in-out forwards 40s, cicle 3s linear forwards 45s, to-the-moon 1.5s linear forwards 48s;
+}
+@keyframes ufo-opacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes cicle {
+	0% {
+		transform: translate(-14%, -182%) scale(0.6);
+	}
+	25% {
+		transform: translate(-17%, -172%) scale(0.7);
+	}
+	50% {
+		transform: translate(-12%, -172%) scale(0.7);
+	}
+	75% {
+		transform: translate(-8%, -172%) scale(0.6);
+	}
+	100% {
+		transform: translate(-5%, -174%) scale(0.6);
+	}
+}
+
+@keyframes to-the-moon {
+	0% {
+		transform: translate(-5%, -176%) scale(0.6);
+	}
+	100% {
+		transform: translate(20%, -200%) scale(0);
+	}
+}
+
+
+.ufo__light-line-1 {
+	transform: translate(70%, -1800%);
+	width: 165px;
+	height: 5px;
+}
+.ufo__light-line-2 {
+	transform: translate(60%, -1800%);
+	width: 175px;
+	height: 5px;
+}
+.light-line-1__dot {
+	height: 100%;
+	width: 15%;
+	position: relative;
+	animation: line-1-dot 0.3s linear infinite alternate;
+}
+@keyframes line-1-dot {
+ 0% {
+	 background-color: red;
+	 left: 0%;
+ }
+ 25% {
+	 background-color: royalblue;
+ }
+ 50% {
+	background-color: springgreen;
+ }
+ 75% {
+	 background-color: violet;
+ }
+ 100% {
+	 background-color: yellow;
+	 left: 85%;
+ }
+}
+.light-line-2__dot {
+	height: 100%;
+	width: 15%;
+	position: relative;
+	animation: line-2-dot 0.3s linear infinite alternate-reverse;
+}
+@keyframes line-2-dot {
+	0% {
+		background-color: red;
+		left: 0%;
+	}
+	25% {
+		background-color: royalblue;
+	}
+	50% {
+	 background-color: springgreen;
+	}
+	75% {
+		background-color: violet;
+	}
+	100% {
+		background-color: yellow;
+		left: 85%;
+	}
+}
+
+.ufo__gradient {
+	transform: translate(3%, -219%);
+	width: 375px;
+	height: 42px;
+	background: linear-gradient(180deg, #66cfb4, #ff00b6, #5664ff);
+	background-size: 600% 600%;
+	-webkit-animation: gradient 2s ease infinite;
+	-moz-animation: gradient 2s ease infinite;
+	animation: gradient 2s ease infinite;
+	border-radius: 50% 50% 25% 25% / 100% 100% 0% 0%;
+}
+@-webkit-keyframes gradient {
+	0%{background-position:48% 0%}
+	50%{background-position:53% 100%}
+	100%{background-position:48% 0%}
+}
+@-moz-keyframes gradient {
+	0%{background-position:48% 0%}
+	50%{background-position:53% 100%}
+	100%{background-position:48% 0%}
+}
+@keyframes gradient {
+	0%{background-position:48% 0%}
+	50%{background-position:53% 100%}
+	100%{background-position:48% 0%}
+}
+.ufo__light {
+	transform: translate(38%, -15%);
+	width: 220px;
+	height: 445px;
+	background: #ffffff;
+	opacity: 1;
+	background: -webkit-linear-gradient(181deg, #ffffff 0%, rgba(227, 221, 228, 0.5) 100%);
+	background: linear-gradient(181deg, #ffffff 0%, rgba(227, 221, 228, 0.5) 100%);
+	border-radius: 52% 48% 0% 0% / 100% 100% 0% 0%;
+	animation: ufo__light-opacity 1s linear forwards 45s;
+}
+
+@keyframes ufo__light-opacity {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+
+/*_____THE END_____*/
+
+.body-animation__the-end {
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	background: rgba(0, 0, 0, 0.425);
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 20;
+	animation: fade 1s linear forwards 50s;
+}
+
+@keyframes fade {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.the-end__image {
+	width: 200px;
+	height: 300px;
+	transform: translate(300%, 300%) rotate(360deg) scale(0.1);
+	box-shadow: 0px 0px 15px 5px #FFFFFF;
+	animation: spin 1s linear forwards 51s;
+}
+
+@keyframes spin {
+	0% {
+		transform: translate(300%, 300%) rotate(360deg) scale(0.1);
+	}
+	25% {
+		transform: translate(250%, 100%) rotate(270deg) scale(0.5);
+	}
+	50% {
+		transform: translate(200%, 80%) rotate(90deg) scale(0.7);
+	}
+	100% {
+		transform: translate(180%, 50%) rotate(-10deg);
+	}
+}
